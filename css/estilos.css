@@ -1,0 +1,398 @@
+/* Importar fuentes locales */
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Italic-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Dancing Script';
+    src: url('../fonts/BirdsofParadise.ttf') format('truetype');
+    font-weight: bold;
+}
+
+/* Estilos globales */
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Header */
+header {
+    background-color: #d41490;
+    padding: 10px 0;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.logo {
+    height: 60px;
+}
+
+/* Botón hamburguesa (oculto por defecto) */
+.menu-toggle {
+    display: none;
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: white;
+}
+
+/* Menú de navegación */
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* Banner */
+.banner {
+    background-image: url('../img/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    z-index: 1;
+}
+
+.overlay h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.overlay h1 span {
+    font-family: 'Dancing Script', cursive;
+    font-size: 6rem;
+    color: white;
+    display: block;
+    margin: 10px 0;
+}
+
+.overlay h1 small {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.overlay p {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.overlay .fecha {
+    font-size: 1.2rem;
+}
+
+.boton {
+    margin-top: 15px;
+    background-color: #ffc400;
+    color: #222;
+    padding: 15px 30px;
+    font-weight: bold;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 2rem;
+    display: inline-block;
+}
+
+.advertencia {
+    font-size: 1.8rem;
+    margin-top: 20px;
+}
+
+.texto-caja {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 30px 20px;
+    color: white;
+    width: 100%;
+    text-align: center;
+    margin-top: 100px;
+}
+
+/* Destacados */
+.destacados {
+    background-color: #f4b400;
+    color: white;
+    padding: 40px 20px;
+    width: 100%;
+    text-align: left;
+    margin-top: 40px;
+    max-width: 900px;
+}
+
+.destacados h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.destacados ul {
+    list-style: none;
+    padding-left: 0;
+    font-size: 1.2rem;
+}
+
+.destacados ul li {
+    margin: 10px 0;
+}
+
+.contenedor-destacados {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f4b400;
+    padding: 40px;
+    flex-wrap: wrap;
+}
+
+.contenedor-destacados .texto {
+    max-width: 60%;
+}
+
+.boton-boletos {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.boton-boletos-enlace {
+    display: inline-block;
+    background-color: white;
+    color: #1a7c33;
+    padding: 20px 40px;
+    font-size: 2rem;
+    font-weight: bold;
+    border-radius: 25px;
+    text-decoration: none;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+}
+
+.boton-boletos-enlace:hover {
+    transform: scale(1.05);
+}
+
+/* Artistas */
+.artistas {
+    background-color: #4CAF50;
+    padding: 30px 20px;
+    color: white;
+}
+
+.artistas-fila {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.titulo-artistas {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.artistas-contenedor {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.artistas-contenedor img {
+    width: 120px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.logo-artistas img {
+    width: 130px;
+    height: auto;
+}
+
+/* Menú desplegable responsive */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #d41490;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        z-index: 1000;
+        padding-bottom: 20px;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+}
+
+/* Responsividad para dispositivos pequeños */
+@media (max-width: 575px) {
+    .overlay h1 {
+        font-size: 2.5rem;
+    }
+
+    .overlay h1 span {
+        font-size: 4rem;
+    }
+
+    .overlay p {
+        font-size: 1.2rem;
+    }
+
+    .overlay .fecha {
+        font-size: 1rem;
+    }
+
+    .boton {
+        font-size: 1.5rem;
+        padding: 10px 20px;
+    }
+
+    .destacados {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .contenedor-destacados {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contenedor-destacados .texto {
+        max-width: 100%;
+    }
+
+    .boton-boletos-enlace {
+        font-size: 1.5rem;
+        padding: 15px 30px;
+    }
+}
+
+/* Dispositivos medianos */
+@media (min-width: 576px) and (max-width: 768px) {
+    .overlay h1 {
+        font-size: 2.8rem;
+    }
+
+    .overlay h1 span {
+        font-size: 6rem;
+    }
+
+    .overlay .fecha {
+        font-size: 1.1rem;
+    }
+
+    .boton {
+        font-size: 1.7rem;
+        padding: 12px 25px;
+    }
+
+    .destacados {
+        padding: 30px 20px;
+    }
+
+    .contenedor-destacados {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .boton-boletos-enlace {
+        font-size: 1.8rem;
+        padding: 15px 30px;
+    }
+}
+
+/* Dispositivos grandes */
+@media (min-width: 992px) {
+    .overlay h1 {
+        font-size: 3.5rem;
+    }
+
+    .overlay h1 span {
+        font-size: 8rem;
+    }
+
+    .boton {
+        font-size: 2rem;
+        padding: 15px 30px;
+    }
+
+    .contenedor-destacados {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+
+    .contenedor-destacados .texto {
+        max-width: 60%;
+    }
+
+    .boton-boletos-enlace {
+        font-size: 2rem;
+        padding: 20px 40px;
+    }
+}
+
+/* Dispositivos extra grandes */
+@media (min-width: 1200px) {
+    .overlay h1 {
+        font-size: 4rem;
+    }
+
+    .overlay h1 span {
+        font-size: 10rem;
+    }
+}

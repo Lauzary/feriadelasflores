@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boletos - Feria de las Flores</title>
+    <link rel="stylesheet" href="css/estilos.css" />
+</head>
+
+<body>
+    <header>
+        <nav>
+            <!-- Botón de hamburguesa -->
+            <div class="menu-toggle" id="menu-toggle">
+                ☰
+            </div>
+
+            <!-- Logo -->
+            <img src="img/logo.png" alt="Logo Feria de las Flores" class="logo" />
+
+            <!-- Menú de navegación -->
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="boletos.html">Entradas</a></li>
+                <li><a href="#">Programación</a></li>
+                <li><a href="#">Galería</a></li>
+                <li><a href="#">Planifica tu viaje</a></li>
+                <li><a href="#">Contacto</a></li>
+                <li><a href="#">Sobre nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="banner">
+        <div class="overlay">
+            <h1>FERIA INTERNACIONAL DE <span>las flores</span></h1>
+            <section class="destacados">
+                <div class="contenedor-destacados">
+                    <div class="texto">
+                        <h2>➡️ <strong>Destacados del calendario</strong></h2>
+                        <ul>
+                            <li>Desfile de Silleteros - <strong>8 de agosto</strong></li>
+                            <li>Concierto de Carlos Vives - <strong>10 de agosto</strong></li>
+                            <li>Feria de Orquídeas - <strong>11 de agosto</strong></li>
+                        </ul>
+                    </div>
+                    <div class="boton-boletos">
+                        <a href="boletos.html" class="boton-boletos-enlace">BOLETERÍA</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <section class="artistas">
+        <div class="artistas-fila">
+            <h2 class="titulo-artistas">Artistas principales:</h2>
+            <div class="artistas-contenedor">
+                <img src="img/carlosvives.jpg" alt="Carlos Vives" />
+                <img src="img/mariachi.jpg" alt="Mariachi" />
+                <img src="img/otroartista.jpg" alt="Otro artista" />
+            </div>
+            <div class="logo-artistas">
+                <img src="img/logo.png" alt="Logo Feria de las Flores" />
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggle = document.getElementById('menu-toggle');
+            const nav = document.getElementById('nav-links');
+
+            toggle.addEventListener('click', () => {
+                nav.classList.toggle('active');
+            });
+
+            // Cierra el menú al hacer clic en un enlace (opcional)
+            const links = nav.querySelectorAll('a');
+            links.forEach(link => {
+                link.addEventListener('click', () => {
+                    nav.classList.remove('active');
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

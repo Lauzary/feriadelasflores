@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feria de las Flores</title>
+    <link rel="stylesheet" href="css/estilos.css" />
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="menu-toggle" id="menu-toggle">
+                ☰
+            </div>
+
+            <img src="img/logo.png" alt="Logo Feria de las Flores" class="logo" />
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Entradas</a></li>
+                <li><a href="#">Programación</a></li>
+                <li><a href="#">Galería</a></li>
+                <li><a href="#">Planifica tu viaje</a></li>
+                <li><a href="#">Contacto</a></li>
+                <li><a href="#">Sobre nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="banner">
+        <div class="overlay">
+            <h1>FERIA</h1>
+            <h1>
+                INTERNACIONAL DE <span>Las Flores</span>
+                <small>MEDELLÍN, COLOMBIA</small>
+            </h1>
+            <div class="texto-caja">
+                <p>¡La Feria que florece en tu corazón!</p>
+                <p class="fecha">Del 1 al 10 de agosto de 2025</p>
+                <a href="boletos.html" class="boton">Compra tus boletas aquí</a>
+                <p class="advertencia">¡No te lo pierdas!</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggle = document.getElementById('menu-toggle');
+            const nav = document.getElementById('nav-links');
+
+            toggle.addEventListener('click', () => {
+                nav.classList.toggle('active');
+            });
+
+            const links = nav.querySelectorAll('a');
+            links.forEach(link => {
+                link.addEventListener('click', () => {
+                    nav.classList.remove('active');
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
